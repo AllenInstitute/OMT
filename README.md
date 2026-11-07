@@ -1,12 +1,11 @@
 # OMT: Optimal Mixture Transport
 
-Official implementation of
 
 > **A Biconvex Formulation for Stable Transport of Mixture Models with a Unique Solution**
 > Yeganeh Marghi, Kelly Jin, Uygar Sümbül — Allen Institute, Brain Science
 > *40th Conference on Neural Information Processing Systems (NeurIPS 2026)*
 
-Optimal transport (OT) maps one probability distribution onto another, but running it on large datasets is expensive, and the resulting point-to-point plans are hard to interpret. **Optimal Mixture Transport (OMT)** moves transport from individual samples to *mixtures of subpopulations*:
+**Optimal Mixture Transport (OMT)** is a scalable framework that shifts the transport paradigm from individual samples to mixtures of subpopulations, reformulating the transport problem as a strictly biconvex optimization with a unique global minimizer.
 
 - **Strictly biconvex with a unique solution.** Entropic regularization at the component level (ε₁) and at the mixing-weight level (ε₂) turns the non-convex mixture-transport objective into a strictly biconvex problem (Lemma 1). The GOP algorithm reaches its unique global minimizer in a single iteration (Theorem 1).
 - **Stable.** Under weak regularity conditions, which hold for unbounded densities, the OMT map is Lipschitz and tilt-stable. Bounded perturbations of the marginals produce bounded changes in the map (Theorem 2).
