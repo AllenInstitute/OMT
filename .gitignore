@@ -1,4 +1,8 @@
 # Angular specific
+/data_cache/
+/output/
+/wandb/
+/memory/
 /dist/
 /out-tsc/
 /tmp/
@@ -26,3 +30,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+__pycache__
+*.pkl
+*.h5ad
+*.pyc
+*.yml
+.DS_Store
+*.out
+*.toml
+*.sh
+.claude
