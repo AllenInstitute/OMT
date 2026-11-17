@@ -8,6 +8,8 @@
 /tmp/
 /coverage/
 /e2e/test-output/
+/data/
+/model/
 /.angular/
 .angular/
 
@@ -33,6 +35,7 @@ yarn-error.log*
 
 __pycache__
 *.pkl
+*.pdf
 *.h5ad
 *.pyc
 *.yml
