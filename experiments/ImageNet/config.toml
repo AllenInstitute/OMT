@@ -1,0 +1,42 @@
+# Data and code locations for the ImageNet experiments.
+#
+# Relative paths are resolved against this folder. Do not put machine-specific
+# paths here: copy the keys you need into config.local.toml (gitignored), which
+# overrides this file.
+
+[paths]
+# Directories added to sys.path. They must provide the OMT helpers
+# (functions.py, solver.py) and HiRef (rank_annealing.py, HR_OT.py, FRLC.py).
+code_dirs = [
+    "path/to/HiRef",
+    "path/to/HiRef/omt",
+    "path/to/HiRef/src",
+]
+
+# Pretrained torchvision ResNet50 weights (resnet50-0676ba61.pth).
+resnet_weights = "model/resnet50-0676ba61.pth"
+
+# Where embedding.py writes imagenet_embeddings_<split>.h5ad and where
+# fit_gmm.py / run_omt.py read and write the fitted mixtures gmm_*.pkl.
+model_dir = "model"
+
+# ResNet50 train-split embeddings produced by embedding.py.
+embeddings = "model/imagenet_embeddings_train.h5ad"
+
+# Pre-fitted mixture used by run_omt.py --method gmmot and ImageNet.ipynb.
+gmm = "model/gmm_1000.pkl"
+
+# Pickled embedding matrix loaded by ImageNet.ipynb.
+embeddings_pkl = "model/embeddings.pkl"
+
+# JSON reports written by the experiment scripts.
+results_dir = "results"
+
+# Raw ImageNet (Kaggle ILSVRC) download.
+imagenet_dir = "data/imagenet_kaggle"
+
+# Raw ImageNet images on S3, read by embedding.py.
+[s3]
+aws_profile = "your-aws-profile"
+bucket = "your-bucket"
+prefix = "ImageNet/ILSVRC/Data/CLS-LOC"
