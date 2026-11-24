@@ -42,5 +42,5 @@ __pycache__
 .DS_Store
 *.out
 *.toml
-*.sh
+config.local.toml
 .claude
